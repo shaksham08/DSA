@@ -12,18 +12,21 @@ struct Node
     }
 };
 
-void search(Node *head, int num)
+int search(Node *head, int n)
 {
-    int count = 0;
-    while (head != NULL)
+    if (head == NULL)
+        return -1;
+    if (head->data == n)
     {
-
-        if (head->data == num)
-        {
-            cout << "The position is : " << count + 1;
-        }
-        head = head->next;
-        count++;
+        return 1;
+    }
+    else
+    {
+        int res = search(head->next, n);
+        if (res == -1)
+            return -1;
+        else
+            return res + 1;
     }
 }
 
@@ -34,7 +37,7 @@ int main(int argc, char const *argv[])
     Node *temp2 = new Node(30);
     head->next = temp;
     temp->next = temp2;
-    search(head, 20);
-
+    int pos = search(head, 30);
+    cout << pos;
     return 0;
 }
