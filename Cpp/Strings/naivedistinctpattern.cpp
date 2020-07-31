@@ -7,7 +7,7 @@ void patternSearch(string txt, string pat)
     int N = txt.length();
 
     /* A loop to slide pat[] one by one */
-    for (int i = 0; i <= N - M; i++)
+    for (int i = 0; i <= N - M;)
     {
         int j;
 
@@ -19,6 +19,14 @@ void patternSearch(string txt, string pat)
         if (j == M) // if pat[0...M-1] = txt[i, i+1, ...i+M-1]
             cout << "Pattern found at index "
                  << i << endl;
+        if (j == 0)
+        {
+            i++;
+        }
+        else
+        {
+            i = i + j;
+        }
     }
 }
 
