@@ -23,6 +23,7 @@ int main(int argc, char const *argv[])
     std::cout << "Enter the total number of items : ";
     std::cin >> n;
     int arr[n];
+    std::cout << "Enter the total value of K : ";
     int k;
     cin >> k;
     for (int i = 0; i < n; i++)
