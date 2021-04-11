@@ -1,23 +1,20 @@
 #include <iostream>
+#include <queue>
 
 using namespace std;
 
-void minmax(int arr[], int n)
+int kthmin(int arr[], int n, int k)
 {
-    int min = INT_MAX;
-    int max = INT_MIN;
+    priority_queue<int> maxh;
     for (int i = 0; i < n; i++)
     {
-        if (arr[i] < min)
+        maxh.push(arr[i]);
+        if (maxh.size() > k)
         {
-            min = arr[i];
-        }
-        if (arr[i] > max)
-        {
-            max = arr[i];
+            maxh.pop();
         }
     }
-    std::cout << min << " " << max;
+    return maxh.top();
 }
 
 int main(int argc, char const *argv[])
@@ -26,10 +23,12 @@ int main(int argc, char const *argv[])
     std::cout << "Enter the total number of items : ";
     std::cin >> n;
     int arr[n];
+    int k;
+    cin >> k;
     for (int i = 0; i < n; i++)
     {
         std::cin >> arr[i];
     }
-    minmax(arr, n);
+    cout << kthmin(arr, n, k) << endl;
     return 0;
 }
