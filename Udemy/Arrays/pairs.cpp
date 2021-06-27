@@ -63,13 +63,14 @@ void findPairsBinarySearch(int arr[], int n, int sum)
     }
 }
 
+// Time complexity :- O(n)
 vector<int> findPairsSetDS(int arr[], int n, int sum)
 {
     unordered_set<int> st;
     for (int i = 0; i < n; i++)
     {
         if (st.find(sum - arr[i]) != st.end())
-            return {arr[i], sum - arr[i]};
+            return {sum - arr[i], arr[i]};
         st.insert(arr[i]);
     }
     return {};
