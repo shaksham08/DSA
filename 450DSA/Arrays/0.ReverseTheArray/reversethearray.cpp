@@ -3,6 +3,11 @@
 // Input : arr[] = {1, 2, 3} Output : arr[] = {3, 2, 1}
 // Input : arr[] = {4, 5, 1, 2} Output : arr[] = {2, 1, 5, 4}
 
+/* 
+Here we are iterating over the half array and just swapping the values.
+We can also make use of two pointer method to solve the problem
+*/
+
 #include <iostream>
 
 void reverse(int arr[], int n)
@@ -20,7 +25,7 @@ int main(int argc, char const *argv[])
     int n;
     std::cout << "Enter the total number of items : ";
     std::cin >> n;
-    int arr[n];
+    int arr[100];
     for (int i = 0; i < n; i++)
     {
         std::cin >> arr[i];

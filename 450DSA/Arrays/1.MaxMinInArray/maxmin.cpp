@@ -1,5 +1,7 @@
 // Problem statement :Write a C function to return minimum and maximum in an array. Your program should make the minimum number of comparisons.
 
+// Time complexity = O(n)
+
 #include <iostream>
 #include <climits>
 
@@ -26,7 +28,7 @@ int main(int argc, char const *argv[])
     int n;
     std::cout << "Enter the total number of items : ";
     std::cin >> n;
-    int arr[n];
+    int arr[100];
     for (int i = 0; i < n; i++)
     {
         std::cin >> arr[i];

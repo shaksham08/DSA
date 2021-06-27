@@ -7,7 +7,7 @@
 #include <queue>
 
 using namespace std;
-
+// Here we make use of maxHeap To solve the Problem
 //The time complexity for this solution is  N + klog(N)
 // N -> for creating a heap and k is for poping the k elements and log N is whenever we pop we need to heapify
 // For this question even we can use quick select algorithm , it works on partition algorithm same as quick sort algorithm
