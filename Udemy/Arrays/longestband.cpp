@@ -1,3 +1,17 @@
+/*
+Given an array containing N integers, find length of longest band
+
+A band is defined as a subsequence which can be reordered in such manner that all elements appear consecutive(ie with absolute difference of 1 between neighbouring elements)
+
+A longest band is the band (Subsequence) which contains maximum integers.
+
+INPUT
+arr = [1,9,3,0,18,5,2,4,10,7,12,6]
+
+OUTPUT
+8
+*/
+
 #include <iostream>
 #include <vector>
 #include <algorithm>

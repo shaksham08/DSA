@@ -1,3 +1,18 @@
+/*
+Write a function that takes input an array of distict integers,and returns the length of highest mountatin
+
+A mountain is defined as adjacent integers that are strictly increasing until they reach a peak, a which they become strictly decreasing 
+
+At least 3 numbers are required to form a mountain
+
+INPUT
+arr = [5,6,1,2,3,4,5,3,2,0,1,2,3,-2,4]
+
+OUTPUT 
+9
+
+*/
+
 #include <iostream>
 #include <vector>
 using namespace std;
