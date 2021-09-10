@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int dp[101][1001];
+int dp[101][101];
 
 //Top down approach
 int maxProfit(int val[], int wt[], int capacity, int n)
@@ -19,18 +19,18 @@ int maxProfit(int val[], int wt[], int capacity, int n)
         }
     }
 
-    for (int i = 1; i < n; i++)
+    for (int i = 1; i < n + 1; i++)
     {
-        for (int j = 1; j < capacity; j++)
+        for (int j = 1; j < capacity + 1; j++)
         {
 
-            if (wt[n - 1] <= capacity)
+            if (wt[i - 1] <= j)
             {
-                dp[n][capacity] = max(val[n - 1] + dp[n - 1][capacity - wt[n - 1]], dp[n - 1][capacity]);
+                dp[i][j] = max(val[i - 1] + dp[i - 1][j - wt[i - 1]], dp[i - 1][j]);
             }
             else
             {
-                dp[n][capacity] = dp[n - 1][capacity];
+                dp[i][j] = dp[i - 1][j];
             }
         }
     }
