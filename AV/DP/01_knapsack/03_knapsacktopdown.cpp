@@ -3,11 +3,10 @@
 
 using namespace std;
 
-int dp[101][101];
-
 //Top down approach
 int maxProfit(int val[], int wt[], int capacity, int n)
 {
+    int dp[101][101];
     for (int i = 0; i < 101; i++)
     {
         for (int j = 0; j < 101; j++)
